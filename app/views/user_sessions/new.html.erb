@@ -1,0 +1,56 @@
+
+  <div id="container"> 
+    <header> 
+ 
+      <p>Login Form <p> 
+      <% if @user_session.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user_session.errors.count, "error") %> prohibited this Login from being saved:</h2>
+
+          <ul>
+          <% @user_session.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>      
+    </header> 
+ 
+    	<div id="main" role="main"> 
+ 
+ 
+                <%= form_for(@user_session) do |f| %>
+ 
+                    <fieldset> 
+            
+                        <label for="username">Username <span class="ico"><img src="/images/user.png" alt="Username Icon" border="0" /></span></label> 
+ 
+		               		  <%= f.text_field :username, :id =>'username' %>    
+ 
+                       <label for="password">Password <span class="ico"><img src="/images/pass.png" alt="Password Icon" border="0" /></span></label> 
+ 
+	        	            <%= f.password_field :password, :id => 'password' %>    
+ 
+            		</fieldset> 
+ 
+                    <fieldset> 
+                    	
+                        <span class="password"><a href="#">Forgot Password</a></span> 
+ 
+                    	<button type=submit>>>&nbsp;&nbsp;&nbsp;GO</button> 
+ 
+                    </fieldset> 
+ 
+ 
+           		<% end %> 
+ 
+ 
+ 
+    	</div> 
+ 
+    <footer> 
+ 
+    </footer> 
+ 
+  </div> <!--! end of #container --> 
+

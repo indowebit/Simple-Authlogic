@@ -1,0 +1,14 @@
+ <div id="nav">
+   <%= link_to "Register", new_user_path %>
+ </div>
+<%= flash[:notice] %>
+<p> this is index page </p>
+<table>
+ <tr>
+  <td>Username</td>
+  <td>Email</td>
+  <td>Action</td>
+ </tr>
+ <%= render @users %>
+</table>
+

@@ -1,0 +1,6 @@
+<p> Show User </p>
+<p>User name : <%=@user.username %></p>
+<p>Email : <%=@user.email %></p>
+
+<p><%= link_to("Edit",edit_user_path(@user)) %></p>
+<p><%= link_to("Back",users_path) %> </p>
